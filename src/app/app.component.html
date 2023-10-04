@@ -2,7 +2,9 @@
   <header>My Users</header>
   <main>
     <ul>
-      <app-user-list-item *ngFor="let User of UserList" [User]="User"></app-user-list-item>
+      <app-user-list-item
+        *ngFor="let User of UserList" [User]="User"
+        (onDeleteUser)="handleDeleteUser($event)"></app-user-list-item>
     </ul>
   </main>
   <footer>

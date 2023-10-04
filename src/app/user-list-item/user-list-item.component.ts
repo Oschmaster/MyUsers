@@ -12,9 +12,14 @@ import {RoundButtonComponent} from "../round-button/round-button.component";
 })
 export class UserListItemComponent {
   @Input() User!: User;
+  @Output() onDeleteUser = new EventEmitter<number>();
 
   public isActive = false;
   public onClick(event: Event){
     this.isActive = !this.isActive;
+  }
+
+  public onDeleteClick(id: number){
+    this.onDeleteUser.emit(id);
   }
 }

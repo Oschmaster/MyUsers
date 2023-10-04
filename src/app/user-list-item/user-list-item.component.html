@@ -1,0 +1,8 @@
+<li [class.user-list-item__active]="isActive" class="user-list-item" (click)="onClick($event)">
+  <app-round-button [class.button__hidden]="!isActive" [type]="'edit'"></app-round-button>
+  <div class="user-list-item_name">{{User.firstName}} {{User.lastName}}</div>
+  <div class="user-list-item_birthday" [class.user-list-item_birthday__hidden]="!isActive">{{User.birthDate}}</div>
+  <div class="user-list-item_email" [class.user-list-item_email__hidden]="!isActive">{{User.email}}</div>
+  <div class="user-list-item_gender" [class.user-list-item_gender__hidden]="!isActive">{{User.gender}}</div>
+  <app-round-button [class.button__hidden]="!isActive" [type]="'delete'"></app-round-button>
+</li>

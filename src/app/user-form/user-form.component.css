@@ -1,0 +1,74 @@
+.form-container {
+  height: 100%;
+}
+
+.user-form {
+  box-sizing: border-box;
+  border: solid 4px black;
+  border-radius: 1em;
+  height: 100%;
+  background-color: #228be6;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1 1 auto;
+  gap: .5em;
+  padding: 1em 0;
+  font-weight: bold;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+label {
+  height: 1.2em;
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+
+input,
+select {
+  border: solid 4px black;
+  border-radius: 1em;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.buttons{
+  box-sizing: border-box;
+  width: 80%;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+}
+
+.cancel-button,
+.submit-button {
+  flex: 1 0 0;
+  border: solid 4px black;
+  border-radius: 1em;
+  text-align: center;
+  font-size: larger;
+  background-color: lightgreen;
+  color: white;
+  padding: .5em;
+}
+
+.cancel-button {
+  background-color: crimson;
+  color: white;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

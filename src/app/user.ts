@@ -1,8 +1,8 @@
 export interface User {
   id: number;
-  firstName: string;
-  lastName: string;
-  birthDate: Date;
-  email: string;
-  gender: string;
+  firstName: string | null | undefined;
+  lastName: string | null | undefined;
+  birthDate: Date | null | undefined;
+  email: string | null | undefined;
+  gender: string | null | undefined;
 }

@@ -1,13 +1,9 @@
 <div class="content">
   <header>My Users</header>
   <main>
-    <ul>
-      <app-user-list-item
-        *ngFor="let User of UserList" [User]="User"
-        (onDeleteUser)="handleDeleteUser($event)"></app-user-list-item>
-    </ul>
+    <router-outlet></router-outlet>
   </main>
   <footer>
-    <app-round-button [type]="'add'"></app-round-button>
+    <app-round-button routerLink="/user-form" [type]="'add'"></app-round-button>
   </footer>
 </div>

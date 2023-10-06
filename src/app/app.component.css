@@ -22,21 +22,16 @@ main {
   flex: 1 1 auto;
 }
 
-main ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  font-size: large;
-  gap: 1em;
-}
-
 footer {
-  padding-top: .5em;
   height: 3.5em;
   border-top: solid 4px black;
   display: flex;
   justify-content: center;
   flex-shrink: 0;
+}
+
+app-round-button {
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }

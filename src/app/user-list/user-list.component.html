@@ -1,0 +1,5 @@
+<ul class="user-list">
+  <app-user-list-item
+    *ngFor="let User of UserList" [User]="User"
+    (onDeleteUser)="handleDeleteUser($event)"></app-user-list-item>
+</ul>

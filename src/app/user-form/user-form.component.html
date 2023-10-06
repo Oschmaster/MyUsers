@@ -1,0 +1,74 @@
+<div class="form-container">
+  <form class="user-form" [formGroup]="userForm" (ngSubmit)="onSubmit($event)">
+
+    <div class="form-group">
+      <label for="firstName">
+        Firstname
+      </label>
+      <input id="firstName" type="text" formControlName="firstName">
+      <div class="error-message">
+        <span *ngIf="userForm.get('firstName')?.hasError('required') && userForm.get('firstName')?.touched">
+          Firstname is required.
+      </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">
+        Lastname
+      </label>
+      <input id="lastName" type="text" formControlName="lastName">
+      <div class="error-message">
+        <span *ngIf="userForm.get('lastName')?.hasError('required') && userForm.get('lastName')?.touched">
+        Lastname is required.
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="birthDate">
+        Birthdate
+      </label>
+      <input id="birthDate" type="date" formControlName="birthDate">
+      <div class="error-message">
+        <span *ngIf="userForm.get('birthDate')?.hasError('required') && userForm.get('birthDate')?.touched">
+        Birthdate is required.
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">
+        Email
+      </label>
+      <input id="email" type="email" formControlName="email">
+      <div class="error-message">
+        <span *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">
+        Email is required.
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="gender">
+        Gender
+      </label>
+
+      <select name="gender" id="gender" formControlName="gender">
+        <option value="male">male</option>
+        <option value="female">female</option>
+      </select>
+      <div class="error-message">
+        <span *ngIf="userForm.get('gender')?.hasError('required') && userForm.get('gender')?.touched">
+        Gender is required.
+        </span>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button (click)="onCancel($event)" routerLink="/" class="cancel-button" type="submit">CANCEL</button>
+      <button (click)="onSubmit($event)" class="submit-button" type="submit">OK</button>
+    </div>
+
+  </form>
+</div>

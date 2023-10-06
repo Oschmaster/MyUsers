@@ -1,0 +1,36 @@
+.user-list-item {
+  border: solid 4px black;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: black;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.user-list-item__active {
+  background: #228be6;
+  color: white;
+}
+
+.button__hidden {
+  display: none;
+}
+
+.user-list-item_name {
+  font-size: larger;
+}
+
+.user-list-item_birthday,
+.user-list-item_email,
+.user-list-item_gender {
+  margin-left: 1em;
+}
+
+.user-list-item_birthday__hidden,
+.user-list-item_email__hidden,
+.user-list-item_gender__hidden {
+  display: none;
+}
